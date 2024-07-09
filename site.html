@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding-top: 50px; /* Add some padding to move the content down */
+        }
+        .login-container {
+            text-align: center;
+        }
+        .login-box {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 350px; /* Adjust width for narrower box */
+            height: 350px; /* Adjust height for taller box */
+            margin-top: 20px;
+        }
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-box input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #11316e;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-box input[type="submit"]:hover {
+            background-color: #0d2652;
+        }
+        .login-image {
+            width: 100%;
+            max-width: 400px; /* Increase max-width for larger image */
+            border-radius: 8px;
+        }
+        .login-options {
+            text-align: left;
+            margin-top: 10px;
+        }
+        .login-options label {
+            font-size: 14px;
+            color: #343a40;
+            font-weight: bold;
+        }
+        .login-options a {
+            font-size: 14px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .login-options a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img class="login-image" src="https://remote.sonichealthcare.com/public/share/css/facade3.jpg" alt="Login Image">
+        <div class="login-box">
+            <h1>Sign In</h1>
+            <form id="aa" action="#">
+                <input type="text" placeholder="Username" name="username">
+                <input id="user" type="password" placeholder="Password here" name="password">
+                <input id="pass" type="submit" value="Sign In">
+                <div class="login-options">
+                    <label>
+                        <input type="checkbox"> Stay signed in
+                    </label>
+                    <br>
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            © 2024 Sonic Healthcare Limited
+        </div>
+    </div>
+</body>
+</html>
